@@ -1,17 +1,11 @@
 {
-  "name": "@examples/next-starter",
-  "version": "9.17.0",
+  "name": "jitera-coding-test",
+  "version": "1.0",
   "private": true,
   "scripts": {
-    "build:1-migrate": "prisma migrate deploy",
-    "build:2-build": "next build",
+    "build:1-build": "next build",
     "build": "run-s build:*",
-    "db-up": "docker-compose up -d",
-    "db-seed": "prisma db seed",
-    "db-migrate-dev": "yarn prisma migrate dev",
-    "db-nuke": "docker-compose down --volumes --remove-orphans",
     "dev": "next dev",
-    "dx": "cross-env DATABASE_URL=postgresql://postgres:@localhost:5632/trpcdb run-s db-up db-migrate-dev db-seed dev",
     "start": "next start",
     "lint": "eslint src",
     "lint-fix": "yarn lint --fix",
@@ -20,11 +14,7 @@
     "test": "run-s test:*",
     "test:unit": "jest",
     "test:e2e": "jest --config jest.playwright.config.ts",
-    "ts-node": "ts-node --compiler-options \"{\\\"module\\\":\\\"commonjs\\\"}\"",
-    "postinstall": "prisma generate"
-  },
-  "prisma": {
-    "seed": "yarn ts-node prisma/seed.ts"
+    "ts-node": "ts-node --compiler-options \"{\\\"module\\\":\\\"commonjs\\\"}\""
   },
   "prettier": {
     "printWidth": 80,
@@ -32,18 +22,24 @@
     "singleQuote": true
   },
   "dependencies": {
-    "@prisma/client": "^3.0.1",
+    "@chakra-ui/icons": "^1.1.1",
+    "@chakra-ui/react": "^1.7.4",
+    "@emotion/react": "^11.7.1",
+    "@emotion/styled": "^11.6.0",
     "@trpc/client": "^9.17.0",
     "@trpc/next": "^9.17.0",
     "@trpc/react": "^9.17.0",
     "@trpc/server": "^9.17.0",
+    "axios": "^0.25.0",
     "clsx": "^1.1.1",
+    "framer-motion": "^5.6.0",
     "next": "^12.0.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-query": "^3.27.0",
     "start-server-and-test": "^1.12.0",
     "superjson": "^1.7.4",
+    "svg-inline-react": "^3.2.1",
     "zod": "^3.0.0"
   },
   "devDependencies": {
@@ -65,12 +61,9 @@
     "npm-run-all": "^4.1.5",
     "playwright": "^1.14.1",
     "prettier": "^2.5.1",
-    "prisma": "^3.7.0",
     "ts-jest": "^27.0.5",
     "ts-node": "^10.3.0",
     "typescript": "4.4.4"
   },
-  "publishConfig": {
-    "access": "restricted"
-  }
+  "license": "MIT"
 }

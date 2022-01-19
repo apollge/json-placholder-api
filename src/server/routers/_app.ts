@@ -1,9 +1,9 @@
 /**
  * This file contains the root router of your tRPC-backend
  */
+import { createRouter } from 'server/createRouter';
+import { userRouter } from 'server/routers/user';
 import superjson from 'superjson';
-import { createRouter } from '../createRouter';
-import { postRouter } from './post';
 
 /**
  * Create your application's root router
@@ -22,6 +22,6 @@ export const appRouter = createRouter()
    * @link https://trpc.io/docs/error-formatting
    */
   // .formatError(({ shape, error }) => { })
-  .merge('post.', postRouter);
+  .merge('user.', userRouter);
 
 export type AppRouter = typeof appRouter;
