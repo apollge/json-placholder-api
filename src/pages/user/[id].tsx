@@ -1,9 +1,7 @@
 import { EmailIcon, ExternalLinkIcon, PhoneIcon } from '@chakra-ui/icons';
 import {
   Box,
-  Button,
   Container,
-  Flex,
   Heading,
   Link,
   List,
@@ -153,10 +151,6 @@ const UserViewPage: NextPageWithLayout = () => {
                   </ListItem>
                 </List>
               </Box>
-
-              <Flex justifyContent="flex-end">
-                <Button>Delete</Button>
-              </Flex>
             </Stack>
           </Stack>
         </SimpleGrid>
