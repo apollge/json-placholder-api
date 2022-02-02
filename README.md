@@ -1,4 +1,4 @@
-# Jitera Coding Test
+# Consuming jsonplaceholder api
 
 Built from tRPC [Example Apps](https://trpc.io/docs/example-apps)
 
